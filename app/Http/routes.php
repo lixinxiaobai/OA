@@ -14,8 +14,9 @@
 // User routes
 Route::group(['middleware' => 'auth'], function () {
     // 主页
-    Route::get('/', 'HomeController@index');
     Route::get('/index', 'HomeController@index');
+    Route::get('login/{provider}', 'Auth\AuthController@redirectToProvider');
+    Route::get('login/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 });
 
 
