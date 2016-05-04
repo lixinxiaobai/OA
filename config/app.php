@@ -157,6 +157,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /**
+         * 第三方服务Service Providers...
+         */
+        Bican\Roles\RolesServiceProvider::class,
+
     ],
 
     /*
