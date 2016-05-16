@@ -1,0 +1,52 @@
+<div class="row">
+	<div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+		<div class="logo">
+			<img ng-src="{{app.layout.logo}}" alt="{{app.name}}"/>
+		</div>
+		<div class="box-login">
+			<form class="form-login" method="post" action="authenticate">
+				<csrf-login></csrf-login>
+				<fieldset>
+					<legend>
+						{{ app.name }} {{ app.version }}
+					</legend>
+					<p>
+						请输入您的账号或密码
+					</p>
+
+					<div class="form-group">
+						<span class="input-icon">
+							<input type="text" class="form-control" name="email" placeholder="账号">
+							<i class="fa fa-user"></i> </span>
+					</div>
+					<div class="form-group form-actions">
+						<span class="input-icon">
+							<input type="password" class="form-control password" name="password" placeholder="密码">
+							<i class="fa fa-lock"></i>
+							<a class="forgot" ui-sref="login.forgot">
+								忘记密码？
+							</a> </span>
+					</div>
+					<errors></errors>
+					<div class="form-actions">
+						<div class="checkbox clip-check check-primary">
+							<input type="checkbox" id="remember" name="remember" value="1">
+							<label for="remember">
+								记住登录?
+							</label>
+						</div>
+						<button type="submit" class="btn btn-primary pull-right">
+							登陆 <i class="fa fa-arrow-circle-right"></i>
+						</button>
+					</div>
+					<div class="new-account">
+						没有账号？请找管理员进行申请
+					</div>
+				</fieldset>
+			</form>
+			<div class="copyright">
+				{{app.year}} &copy; {{ app.name }} by {{ app.author }}.
+			</div>
+		</div>
+	</div>
+</div>

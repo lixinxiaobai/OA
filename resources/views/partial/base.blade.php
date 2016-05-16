@@ -2,7 +2,7 @@
 @section('link')
 		<link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 @stop
 
 @section('script')

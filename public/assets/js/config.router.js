@@ -25,7 +25,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     // APPLICATION ROUTES
     // -----------------------------------
     // For any unmatched url, redirect to /app/dashboard
-    $urlRouterProvider.otherwise("/views/dashboard");
+    $urlRouterProvider.otherwise("/app/dashboard");
     //
     // Set up the states
     $stateProvider.state('app', {

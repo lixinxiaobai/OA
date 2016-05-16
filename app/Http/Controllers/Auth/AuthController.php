@@ -28,7 +28,7 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/role';
 
     /**
      * Create a new authentication controller instance.
@@ -37,6 +37,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
+
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
@@ -68,5 +69,13 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    public function login(Request $request){
+        // dd('abcde');
+//        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+//            // 认证通过...
+//            return redirect()->intended('dashboard');
+//        }
     }
 }

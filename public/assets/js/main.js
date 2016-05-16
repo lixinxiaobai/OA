@@ -1,7 +1,8 @@
-var app = angular.module('clipApp', ['clip-two']);
+var app = angular.module('oa-app', ['clip-two']);
 app.run(['$rootScope', '$state', '$stateParams',
 function ($rootScope, $state, $stateParams) {
-
+    //console.log($state);
+    //console.log($stateParams);
     // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
     FastClick.attach(document.body);
 
@@ -40,24 +41,26 @@ function ($rootScope, $state, $stateParams) {
     };
 }]);
 // translate config
-app.config(['$translateProvider',
-function ($translateProvider) {
-
-    // prefix and suffix information  is required to specify a pattern
-    // You can simply use the static-files loader with this pattern:
-    $translateProvider.useStaticFilesLoader({
-        prefix: 'assets/i18n/',
-        suffix: '.json'
-    });
-
-    // Since you've now registered more then one translation table, angular-translate has to know which one to use.
-    // This is where preferredLanguage(langKey) comes in.
-    $translateProvider.preferredLanguage('en');
-
-    // Store the language in the local storage
-    $translateProvider.useLocalStorage();
-
-}]);
+//app.config(['$translateProvider',
+//function ($translateProvider) {
+//
+//    // prefix and suffix information  is required to specify a pattern
+//    // You can simply use the static-files loader with this pattern:
+//    $translateProvider.useStaticFilesLoader({
+//        prefix: 'assets/i18n/',
+//        suffix: '.json'
+//    });
+//
+//    // Since you've now registered more then one translation table, angular-translate has to know which one to use.
+//    // This is where preferredLanguage(langKey) comes in.
+//    $translateProvider.preferredLanguage('zh_cn');
+//
+//   // console.log( $translateProvider.proposedLanguage);
+//
+//    // Store the language in the local storage
+//    $translateProvider.useLocalStorage();
+//
+//}]);
 // Angular-Loading-Bar
 // configuration
 app.config(['cfpLoadingBarProvider',

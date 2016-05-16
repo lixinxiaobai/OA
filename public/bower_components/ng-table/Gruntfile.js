@@ -118,17 +118,17 @@ module.exports = function(grunt) {
                     }
                 }
             }
-        },
-        ngTemplateCache: {
-            views: {
-                files: {
-                    './.temp/scripts/views.js': 'src/ng-table/**/*.html'
-                },
-                options: {
-                    trim: 'src/',
-                    module: 'ngTable'
-                }
-            }
         }
+        //ngTemplateCache: {
+        //    views: {
+        //        files: {
+        //            './.temp/scripts/views.js': 'src/ng-table/**/*.html'
+        //        },
+        //        options: {
+        //            trim: 'src/',
+        //            module: 'ngTable'
+        //        }
+        //    }
+        //}
     });
 };

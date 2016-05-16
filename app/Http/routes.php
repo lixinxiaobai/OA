@@ -15,11 +15,11 @@
 Route::group(['middleware' => 'auth'], function () {
     // 主页
     Route::get('/', 'HomeController@index');
-    Route::get('login/{provider}', 'Auth\AuthController@redirectToProvider');
-    Route::get('login/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+//    Route::get('login/{provider}', 'Auth\AuthController@redirectToProvider');
+//    Route::get('login/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 });
 
-Route::get('/role','RoleController@index');
+Route::post('/authenticate','LoginController@authenticate');
 Route::get('/verify','LoginController@verify');
 
 Route::auth();
